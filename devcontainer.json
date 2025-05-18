@@ -1,6 +1,8 @@
     {
-        "name": "Lean 4 Test Environment (Official Image)",
-        "image": "ghcr.io/leanprover/lean4:stable",
+        "name": "Lean 4 (via Dockerfile)",
+        "build": {
+            "dockerfile": "Dockerfile"
+        },
         "customizations": {
             "vscode": {
                 "extensions": [
