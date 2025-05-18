@@ -1,0 +1,27 @@
+    # Specify the Docker image to use
+    # This official Lean 4 image has Lean, elan, and Lake pre-installed.
+    image: ghcr.io/leanprover/lean4:stable
+
+    # Tasks to run when a workspace starts
+    tasks:
+      - name: Verify Lean Setup
+        init: |
+          echo "Verifying Lean installation in Gitpod..."
+          echo "Elan version:"
+          elan --version
+          echo "Default toolchain:"
+          elan show
+          echo "Lean version:"
+          lean --version
+          echo "Lake version:"
+          lake --version
+          echo "Environment should be ready."
+        command: |
+          echo "Gitpod workspace opened. You can now open your .lean files from the explorer."
+          echo "Try opening Lean_4_Q_Simluation.lean and see if errors are correctly reported."
+
+    # VS Code Extensions to install in the Gitpod workspace
+    vscode:
+      extensions:
+        - leanprover.lean4
+    
