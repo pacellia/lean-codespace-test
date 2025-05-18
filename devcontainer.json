@@ -1,0 +1,14 @@
+    {
+        "name": "Lean 4 Test Environment (Official Image)",
+        "image": "ghcr.io/leanprover/lean4:stable",
+        "customizations": {
+            "vscode": {
+                "extensions": [
+                    "leanprover.lean4"
+                ],
+                "settings": {}
+            }
+        },
+        "remoteUser": "vscode"
+    }
+    
