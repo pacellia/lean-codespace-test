@@ -1,7 +1,10 @@
     {
-        "name": "Lean 4 (via Dockerfile)",
+        "name": "Lean 4 (Forced Image)",
         "build": {
-            "dockerfile": "Dockerfile"
+            "dockerfile": "Dockerfile",
+            "args": {
+                "IMAGE_NAME": "ghcr.io/leanprover/lean4:stable"
+            }
         },
         "customizations": {
             "vscode": {
@@ -10,6 +13,10 @@
                 ],
                 "settings": {}
             }
+        },
+        "overrideCommand": false,
+        "containerEnv": {
+            "CODESPACES_FORCE_IMAGE": "1"
         },
         "remoteUser": "vscode"
     }
